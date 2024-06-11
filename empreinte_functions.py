@@ -128,6 +128,7 @@ testing_hash = "79dfcc5d737194467d52245cfbbba951839"
 
 
 def create_empreinte(username,hash,date,liste_algo):
+    assert isinstance(date,datetime.datetime)
     liste = fonction_gdate(liste_algo, date)
     liste = fonction_gtime(liste,date)
     methode_cryptage = determiner_medthode_de_cryptage(liste,hash)
